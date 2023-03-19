@@ -52,6 +52,18 @@ const CustomerForm = () => {
         autoComplete="off"
         required
       />
+
+<label htmlFor="_email">Date</label>
+      <input
+        type="text"
+        id="_name"
+        onChange={(e) => addNewCustomer(e, "customer_created")}
+        placeholder="Enter email"
+        autoComplete="off"
+        required
+      />
+
+
       <input type="submit" value="Insert" />
     </form>
   );

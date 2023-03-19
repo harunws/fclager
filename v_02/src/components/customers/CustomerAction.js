@@ -68,7 +68,7 @@ export const CustomerAction = () => {
     setCustomers(customers);
   };
 
-  // Cance the edit mode.
+  // Cancel the edit mode.
   const cancelEdit = (customer_id) => {
     customers = customers.map((customer) => {
       if (customer.customer_id === customer_id) {
@@ -98,7 +98,7 @@ export const CustomerAction = () => {
             if (customer.customer_id === customerData.customer_id) {
               customer.isEditing = false;
               customer.customer_first_name = customerData.customer_first_name;
-              customer.customer_lastname_name = customerData.customer_lastname;
+              customer.customer_last_name = customerData.customer_last_name;
               customer.customer_email = customerData.customer_email;
               return customer;
             }
