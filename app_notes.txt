@@ -1,0 +1,54 @@
+🔴🟢🟡 🔎 ❓ ❗ 👀 🌏🤖 🧶 🧩 ⏱ 📆 🚩 🥎⛔🚀💿🧬🔋 ⭐📤📍👺
+Emoji list: 
+=============================
+  🔴  Needs solution, Have some issues & errors
+  🟡  Warning & Waiting for solution,  Pending &Not completed
+  🟢  Solved, Completed
+  🔎  Search & Find & Understand
+  ❓  Question / Quiz
+  ❗❗❗ Priority 1 important
+  ❗❗  Priority 2 important
+  ❗   Priority 3 important
+  👀  Examine when you have time
+  🌏  Link
+  🤖 Github Link
+  🧶  Actual, Present
+  🧩  Install package
+  ⏱  Time
+  📆  Date
+  🚩  Extra caution 
+  🥎  Beginning of the steps
+  ⛔  Errors & issues
+  🚀  Solutions
+  💿  Backup
+  🧬  Code lines
+  📤  Output after any code 
+  🔋   Start, run or activate an app
+ ⭐ For likes or attentions
+  📍  Beginning of the heads and subheads
+  👺Par, password etc.
+
+ToDo:
+# Design your own customer list
+# Design your own form
+# Add read single customer
+# Try to add register & login app
+# Use ninja htlm tut frame.. 
+🟢 v02 # Add to customers table:
+🟢 v02 custormer_first_name
+🟢 v02 customer_last_name
+🟢 v02 customer_created_at
+# DB Name: fclager 
+# Table name: customers_v02
+
+
+
+
+V01:
+# Bootstrap added
+# Imported in App.js
+# React Context used for crud functions
+# Added 3 customers
+# Crud runs fine
+# DB Name: fclager 
+# Table name: customers_v01
