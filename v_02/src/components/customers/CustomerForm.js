@@ -23,15 +23,26 @@ const CustomerForm = () => {
   return (
     <form className="insertForm" onSubmit={submitCustomer}>
       <h2>Insert Customer</h2>
-      <label htmlFor="_name">Name</label>
+      <label htmlFor="_name">First Name</label>
       <input
         type="text"
         id="_name"
-        onChange={(e) => addNewCustomer(e, "customer_name")}
+        onChange={(e) => addNewCustomer(e, "customer_first_name")}
         placeholder="Enter name"
         autoComplete="off"
         required
       />
+
+      <label htmlFor="_name">Last Name</label>
+      <input
+        type="text"
+        id="_name"
+        onChange={(e) => addNewCustomer(e, "customer_last_name")}
+        placeholder="Enter name"
+        autoComplete="off"
+        required
+      />
+
       <label htmlFor="_email">Email</label>
       <input
         type="email"

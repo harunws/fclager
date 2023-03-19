@@ -25,8 +25,8 @@ const CustomerList = () => {
     });
   };
 
-  const enableEdit = (customer_id, customer_name, customer_email) => {
-    setNewData({customer_id, customer_name, customer_email});
+  const enableEdit = (customer_id, customer_first_name, customer_last_name, customer_email) => {
+    setNewData({customer_id, customer_first_name, customer_last_name, customer_email});
     editMode(customer_id);
   };
 
@@ -43,20 +43,30 @@ const CustomerList = () => {
     <table>
       <thead>
         <tr>
-          <th>Name</th>
+          <th>First Name</th>
+          <th>Last Name</th>
           <th>Email</th>
+          <th>Create Date</th>
           <th>Action</th>
         </tr>
       </thead>
       <tbody>
-        {customers.map(({ customer_id, customer_name, customer_email, isEditing }) => {
+        {customers.map(({ customer_id, customer_first_name, customer_last_name, customer_email, customer_created, isEditing }) => {
           return isEditing === true ? (
             <tr key={customer_id}>
               <td>
                 <input
                   type="text"
-                  defaultValue={customer_name}
-                  onChange={(e) => updateNewData(e, "customer_name")}
+                  defaultValue={customer_first_name}
+                  onChange={(e) => updateNewData(e, "customer_first_name")}
+                />
+              </td>
+
+              <td>
+                <input
+                  type="text"
+                  defaultValue={customer_last_name}
+                  onChange={(e) => updateNewData(e, "customer_last_name")}
                 />
               </td>
 
@@ -67,6 +77,15 @@ const CustomerList = () => {
                   onChange={(e) => updateNewData(e, "customer_email")}
                 />
               </td>
+
+              {/* <td>
+                <input
+                  type="text"
+                  defaultValue={customer_created}
+                  onChange={(e) => updateNewData(e, "customer_created")}
+                />
+              </td> */}
+
               <td>
                 <button className="btn green-btn" onClick={() => saveBtn()}>
                   Save
@@ -81,12 +100,14 @@ const CustomerList = () => {
             </tr>
           ) : (
             <tr key={customer_id}>
-              <td>{customer_name}</td>
+              <td>{customer_first_name}</td>
+              <td>{customer_last_name}</td>
               <td>{customer_email}</td>
+              <td>{customer_created}</td>
               <td>
                 <button
                   className="btn default-btn"
-                  onClick={() => enableEdit(customer_id, customer_name, customer_email)}
+                  onClick={() => enableEdit(customer_id, customer_first_name, customer_last_name, customer_email)}
                 >
                   Edit
                 </button>

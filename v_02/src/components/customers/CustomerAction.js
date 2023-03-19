@@ -97,7 +97,8 @@ export const CustomerAction = () => {
           customers = customers.map((customer) => {
             if (customer.customer_id === customerData.customer_id) {
               customer.isEditing = false;
-              customer.customer_name = customerData.customer_name;
+              customer.customer_first_name = customerData.customer_first_name;
+              customer.customer_lastname_name = customerData.customer_lastname;
               customer.customer_email = customerData.customer_email;
               return customer;
             }
