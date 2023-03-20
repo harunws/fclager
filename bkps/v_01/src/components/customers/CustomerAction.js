@@ -7,7 +7,7 @@ export const CustomerAction = () => {
   let [customerLength, setCustomerLength] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost/fclager/v_01/customers_api/customer_all.php")
+    fetch("http://localhost/fclager/bkps/v_01/customers_api/customer_all.php")
       .then((res) => {
         return res.json();
       })
@@ -26,7 +26,7 @@ export const CustomerAction = () => {
 
   // Inserting a new user into the database.
   const insertCustomer = (newCustomer) => {
-    fetch("http://localhost/fclager/v_01/customers_api/customer_create.php", {
+    fetch("http://localhost/fclager/bkps/v_01/customers_api/customer_create.php", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -68,7 +68,7 @@ export const CustomerAction = () => {
     setCustomers(customers);
   };
 
-  // Cance the edit mode.
+  // Cancel the edit mode.
   const cancelEdit = (customer_id) => {
     customers = customers.map((customer) => {
       if (customer.customer_id === customer_id) {
@@ -82,7 +82,7 @@ export const CustomerAction = () => {
 
   // Updating a user.
   const updateCustomer = (customerData) => {
-    fetch("http://localhost/fclager/v_01/customers_api/customer_update.php", {
+    fetch("http://localhost/fclager/bkps/v_01/customers_api/customer_update.php", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -119,7 +119,7 @@ export const CustomerAction = () => {
     let customerDeleted = customers.filter((customer) => {
       return customer.customer_id !== theID;
     });
-    fetch("http://localhost/fclager/v_01/customers_api/customer_delete.php", {
+    fetch("http://localhost/fclager/bkps/v_01/customers_api/customer_delete.php", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

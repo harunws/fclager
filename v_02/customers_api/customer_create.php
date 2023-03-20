@@ -11,25 +11,26 @@ require 'db_connection.php';
 $data = json_decode(file_get_contents("php://input"));
 
 if(isset($data->customer_first_name) 
-    && isset($data->customer_last_name) 
-	&& isset($data->customer_email) 
+  && isset($data->customer_last_name) 
+	&& isset($data->customer_email)
 
-    && isset($data->customer_created) 
+  && isset($data->customer_created)
+
   
 
 	&& !empty(trim($data->customer_first_name)) 
-    && !empty(trim($data->customer_last_name)) 
-	&& !empty(trim($data->customer_email))
+  && !empty(trim($data->customer_last_name)) 
+	&& !empty(trim($data->customer_email)) 
 
-    && !empty(trim($data->customer_created))
+	&& !empty(trim($data->customer_created))  
    
 
 	){
     $customerfirstname = mysqli_real_escape_string($db_conn, trim($data->customer_first_name));
     $customerlastname = mysqli_real_escape_string($db_conn, trim($data->customer_last_name));
-    $customeremail = mysqli_real_escape_string($db_conn, trim($data->customer_email));
-    $customercreated = mysqli_real_escape_string($db_conn, trim($data->customer_created));
-   
+    $customeremail = mysqli_real_escape_string($db_conn, trim($data->customer_email));   
+
+    $customercreated = mysqli_real_escape_string($db_conn, trim($data->customer_created));   
 
     if (filter_var($customeremail, FILTER_VALIDATE_EMAIL)) {
         $insertCustomer = mysqli_query($db_conn,"INSERT INTO `customers_v02`(`customer_first_name`, customer_last_name`, `customer_email`, `customer_created`) VALUES('$customerfirstname', '$customerlastname','$customeremail', '$customercreated')");

@@ -22,21 +22,21 @@ const CustomerForm = () => {
 
   return (
     <form className="insertForm" onSubmit={submitCustomer}>
-      <h2>Insert Customer</h2>
-      <label htmlFor="_name">First Name</label>
+      <h2>Insert Customer V02</h2>
+      <label htmlFor="first_name">First Name</label>
       <input
         type="text"
-        id="_name"
+        id="first_name"
         onChange={(e) => addNewCustomer(e, "customer_first_name")}
         placeholder="Enter name"
         autoComplete="off"
         required
       />
 
-      <label htmlFor="_name">Last Name</label>
+      <label htmlFor="last_name">Last Name</label>
       <input
         type="text"
-        id="_name"
+        id="last_name"
         onChange={(e) => addNewCustomer(e, "customer_last_name")}
         placeholder="Enter name"
         autoComplete="off"
@@ -53,16 +53,15 @@ const CustomerForm = () => {
         required
       />
 
-<label htmlFor="_email">Date</label>
+<label htmlFor="_created">Date</label>
       <input
         type="text"
-        id="_name"
+        id="_created"
         onChange={(e) => addNewCustomer(e, "customer_created")}
-        placeholder="Enter email"
+        placeholder="Enter date"
         autoComplete="off"
         required
       />
-
 
       <input type="submit" value="Insert" />
     </form>

@@ -98,8 +98,13 @@ export const CustomerAction = () => {
             if (customer.customer_id === customerData.customer_id) {
               customer.isEditing = false;
               customer.customer_first_name = customerData.customer_first_name;
+
               customer.customer_last_name = customerData.customer_last_name;
+              
               customer.customer_email = customerData.customer_email;
+
+              customer.customer_created = customerData.customer_created;
+
               return customer;
             }
             return customer;

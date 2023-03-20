@@ -22,7 +22,7 @@ const CustomerForm = () => {
 
   return (
     <form className="insertForm" onSubmit={submitCustomer}>
-      <h2>Insert Customer</h2>
+      <h2>Insert Customer V01</h2>
       <label htmlFor="_name">Name</label>
       <input
         type="text"

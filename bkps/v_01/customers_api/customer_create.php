@@ -12,6 +12,7 @@ $data = json_decode(file_get_contents("php://input"));
 
 if(isset($data->customer_name) 
 	&& isset($data->customer_email) 
+
 	&& !empty(trim($data->customer_name)) 
 	&& !empty(trim($data->customer_email))
 	){
@@ -20,6 +21,7 @@ if(isset($data->customer_name)
     if (filter_var($customeremail, FILTER_VALIDATE_EMAIL)) {
         $insertCustomer = mysqli_query($db_conn,"INSERT INTO `customers_v01`(`customer_name`,`customer_email`) VALUES('$customername','$customeremail')");
         if($insertCustomer){
+          
             $last_customer_id = mysqli_insert_id($db_conn);
             echo json_encode(["success"=>1,"msg"=>"Customer Inserted.","customer_id"=>$last_customer_id]);
         }
