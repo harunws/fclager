@@ -28,6 +28,8 @@ Emoji list:
   📍  Beginning of the heads and subheads
   👺Par, password etc.
 
+Github sync test:
+
 ToDo:
 # Design your own customer list
 # Design your own form
